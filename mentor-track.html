@@ -1,0 +1,30 @@
+<head>
+  <title>Task</title>
+</head>
+
+<body>
+	{{> tasks}}
+</body>
+
+<template name="tasks">
+	{{> addTask}}
+	<ul>
+		{{#each task}}
+			{{> taskItem}}
+		{{/each}}
+	</ul>
+</template>
+
+<template name="taskItem">
+	<li>{{title}}</li>
+</template>
+
+<template name="addTask">
+	<form>
+		Create a New Task:
+		<input type="text" placeholder="Type a task here ..." name="taskTitle">
+		<input type="submit" value="Add Task">
+	</form>
+</template>
+
+
